@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   reactStrictMode: true,
   images: {
-    domains: ['github.com'],
+    unoptimized: true,
   },
+  basePath: '/nextjs-portfolio',
+  assetPrefix: '/nextjs-portfolio/',
 };
 
 module.exports = nextConfig;

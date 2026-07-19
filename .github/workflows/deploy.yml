@@ -25,14 +25,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm ci 2>/dev/null || npm install --ignore-scripts
-      - run: npm run build 2>/dev/null || echo "Build not configured"
+      - run: npm ci || npm install
+      - run: npm run build
         env:
           CI: false
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out 2>/dev/null || echo "./dist" 2>/dev/null || echo "."
+          path: ./out
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
