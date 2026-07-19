@@ -46,7 +46,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <footer className="border-t border-border/50 py-8">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <p className="text-muted text-sm">
-            &copy; {new Date().getFullYear()} Mamadi Ezad. Built with Next.js & Tailwind CSS.
+            &copy; {new Date().getFullYear()} Mamadi Ezad — The Code Sorcerer. Built with Next.js, Tailwind CSS, and pure dark magic.
+          </p>
+          <p className="text-muted text-xs mt-2 font-mono">
+            &gt; I don't need a debugger. I am the debugger.
           </p>
         </div>
       </footer>

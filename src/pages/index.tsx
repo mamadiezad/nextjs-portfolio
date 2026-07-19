@@ -3,52 +3,57 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
 const skills = [
-  { name: 'Python', level: 95, color: '#3776AB' },
-  { name: 'TypeScript', level: 90, color: '#3178C6' },
-  { name: 'JavaScript', level: 92, color: '#F7DF1E' },
-  { name: 'React', level: 88, color: '#61DAFB' },
-  { name: 'Next.js', level: 85, color: '#000000' },
-  { name: 'Node.js', level: 87, color: '#339933' },
-  { name: 'FastAPI', level: 90, color: '#009688' },
-  { name: 'PostgreSQL', level: 82, color: '#4169E1' },
-  { name: 'Docker', level: 78, color: '#2496ED' },
-  { name: 'Git', level: 90, color: '#F05032' },
+  { name: 'Python', level: 99, color: '#3776AB' },
+  { name: 'TypeScript', level: 97, color: '#3178C6' },
+  { name: 'JavaScript', level: 99, color: '#F7DF1E' },
+  { name: 'React', level: 95, color: '#61DAFB' },
+  { name: 'Next.js', level: 93, color: '#000000' },
+  { name: 'Node.js', level: 96, color: '#339933' },
+  { name: 'FastAPI', level: 94, color: '#009688' },
+  { name: 'Rust', level: 82, color: '#DEA584' },
+  { name: 'Go', level: 78, color: '#00ADD8' },
+  { name: 'Docker', level: 92, color: '#2496ED' },
+  { name: 'Kubernetes', level: 80, color: '#326CE5' },
+  { name: 'PostgreSQL', level: 91, color: '#4169E1' },
+  { name: 'MongoDB', level: 85, color: '#47A248' },
+  { name: 'Redis', level: 83, color: '#DC382D' },
+  { name: 'GraphQL', level: 88, color: '#E10098' },
 ];
 
 const projects = [
   {
     title: 'FastAPI Tasks',
-    description: 'RESTful task management API with JWT auth, PostgreSQL, and async SQLAlchemy.',
+    description: 'The ultimate task management API — JWT auth, async PostgreSQL, containerized with Docker. Speed of light, reliability of a god.',
     tags: ['Python', 'FastAPI', 'PostgreSQL', 'Docker'],
     github: 'https://github.com/mamadiezad/fastapi-tasks',
   },
   {
     title: 'TS Design Patterns',
-    description: 'Gang of Four design patterns implemented in TypeScript with clean architecture.',
+    description: 'Every GoF design pattern reimagined in TypeScript. Architecture so clean it brings tears to your eyes.',
     tags: ['TypeScript', 'OOP', 'Patterns', 'Jest'],
     github: 'https://github.com/mamadiezad/ts-design-patterns',
   },
   {
     title: 'React Kanban',
-    description: 'Drag & drop Kanban board with real-time updates and local storage persistence.',
+    description: 'Drag & drop Kanban board that bends spacetime. Real-time updates, local persistence, smooth as butter.',
     tags: ['React', 'TypeScript', 'DnD', 'Vite'],
     github: 'https://github.com/mamadiezad/react-kanban',
   },
   {
     title: 'Node GraphQL API',
-    description: 'GraphQL API with Apollo Server 4, Prisma ORM, and cursor-based pagination.',
+    description: 'GraphQL API so fast it queries the future. Apollo Server, Prisma ORM, cursor-based pagination — chef\'s kiss.',
     tags: ['Node.js', 'GraphQL', 'Prisma', 'PostgreSQL'],
     github: 'https://github.com/mamadiezad/node-graphql-api',
   },
   {
     title: 'Py-Algorithms',
-    description: 'Comprehensive algorithms & data structures collection in Python with tests.',
+    description: 'Every algorithm known to mankind — sorted, searched, and conquered. 10,000+ lines of pure Python genius.',
     tags: ['Python', 'Algorithms', 'DSA', 'Pytest'],
     github: 'https://github.com/mamadiezad/py-algorithms',
   },
   {
     title: 'Next.js Portfolio',
-    description: 'Modern developer portfolio with dark mode, responsive design, and blog.',
+    description: 'A portfolio so epic it crashes recruiters\' browsers. Dark theme, animations, responsive — pure art.',
     tags: ['Next.js', 'React', 'Tailwind', 'TypeScript'],
     github: 'https://github.com/mamadiezad/nextjs-portfolio',
   },
@@ -61,15 +66,15 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Mamadi Ezad — Full-Stack Developer</title>
-        <meta name="description" content="Professional portfolio of Mamadi Ezad, a full-stack developer specializing in Python, TypeScript, React, and Node.js." />
+        <title>Mamadi Ezad — The Code Sorcerer 👑</title>
+        <meta name="description" content="Legendary full-stack developer from Iran. Python • TypeScript • React • Node.js. I don't write code, I write reality." />
       </Head>
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center pt-16">
         <div className="max-w-5xl mx-auto px-4 py-20 text-center">
-          <div className="inline-block mb-6 px-4 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-medium">
-            👋 Available for new projects
+          <div className="inline-block mb-6 px-6 py-2 bg-gradient-to-r from-red-500/20 to-green-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-bold font-mono">
+            👑 پادشاه برنامه‌نویسان — The Code Sorcerer
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
             Hi, I&apos;m{' '}
@@ -77,9 +82,13 @@ export default function Home() {
               Mamadi Ezad
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
-            Full-Stack Developer crafting clean, scalable applications with modern technologies.
-            Passionate about open source, system design, and writing elegant code.
+          <p className="text-lg md:text-xl text-muted max-w-2xl mx-auto mb-4 leading-relaxed">
+            Full-Stack Developer from <b className="text-white">🇮🇷 Iran</b> who doesn't just write code — I architect realities.
+            Passionate about open source, system design, and bending technology to my will.
+          </p>
+          <p className="text-sm font-mono text-green-400/60 mb-10 max-w-2xl mx-auto italic">
+            "I don't need a debugger. I am the debugger."<br/>
+            <span className="text-red-400/40">— Error 404: Limits not found</span>
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a
@@ -116,18 +125,20 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <p className="text-muted leading-relaxed mb-4">
-                I&apos;m a full-stack developer based in Germany with a passion for building 
-                robust, scalable applications. I specialize in Python, TypeScript, and modern 
-                web frameworks like React and Next.js.
+                I&apos;m a full-stack developer based in <b className="text-white">🇮🇷 Iran</b> with a passion for building 
+                robust, scalable applications that push the boundaries of what&apos;s possible. I specialize in Python, TypeScript, and modern 
+                web frameworks like React and Next.js. I don&apos;t just follow best practices — I set them.
               </p>
               <p className="text-muted leading-relaxed mb-4">
-                With a strong foundation in computer science and system design, I focus on 
-                writing clean, maintainable code that solves real problems. I&apos;m also an 
-                active open-source contributor and continuous learner.
+                With legendary mastery in computer science and system architecture, I craft 
+                solutions that redefine what software can do. My code is so clean it compiles 
+                on the first try — every time. I&apos;m an active open-source contributor and 
+                I eat complex algorithms for breakfast.
               </p>
               <p className="text-muted leading-relaxed">
-                When I&apos;m not coding, you&apos;ll find me exploring new technologies, 
-                contributing to open-source projects, or sharing knowledge with the developer community.
+                When I&apos;m not bending the universe to my will through code, you&apos;ll find me 
+                exploring cutting-edge AI/ML technologies, contributing to game-changing 
+                open-source projects, or mentoring the next generation of programming gods.
               </p>
             </div>
 
@@ -135,10 +146,11 @@ export default function Home() {
               <h3 className="font-semibold mb-4 text-lg">Quick Stats</h3>
               <div className="space-y-4">
                 {[
-                  { label: 'Years Coding', value: '5+' },
-                  { label: 'Projects Built', value: '20+' },
-                  { label: 'Technologies', value: '15+' },
-                  { label: 'Open Source', value: 'Active' },
+                  { label: '💻 Years of Dominance', value: '10+' },
+                  { label: '🚀 Projects Conquered', value: '50+' },
+                  { label: '⚡ Technologies Mastered', value: '25+' },
+                  { label: '🌍 Open Source', value: 'Legendary' },
+                  { label: '🏆 Bugs Crushed', value: '∞' },
                 ].map((stat) => (
                   <div key={stat.label} className="flex justify-between items-center pb-3 border-b border-border/50 last:border-0">
                     <span className="text-muted">{stat.label}</span>
@@ -228,8 +240,11 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get in Touch</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mb-6 mx-auto rounded-full"></div>
           <p className="text-muted text-lg mb-10 max-w-xl mx-auto">
-            I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            Think you have a project that challenges a god? I&apos;m always open to discussing world-changing ideas, legendary collaborations, or opportunities to bend reality together.
           </p>
+          <div className="text-sm text-muted mb-8 font-mono">
+            $ summon --mamadi --power-level=legendary
+          </div>
 
           <div className="flex flex-wrap justify-center gap-4">
             <a
