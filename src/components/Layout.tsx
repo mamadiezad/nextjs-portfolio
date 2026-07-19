@@ -4,6 +4,7 @@ import Link from 'next/link';
 const navLinks = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
+  { href: '#resume', label: 'Resume' },
   { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Projects' },
   { href: '#contact', label: 'Contact' },
@@ -16,7 +17,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-dark/80 backdrop-blur-md border-b border-border/50">
         <div className="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Mamadi<span className="text-white">Ezad</span>
+            Mohammad<span className="text-white">.dev</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
@@ -35,7 +36,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             href="#contact"
             className="bg-primary hover:bg-primary/80 text-white px-5 py-2 rounded-lg text-sm font-medium transition-all"
           >
-            Hire Me
+            Contact Me
           </a>
         </div>
       </nav>
@@ -46,10 +47,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <footer className="border-t border-border/50 py-8">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <p className="text-muted text-sm">
-            &copy; {new Date().getFullYear()} Mamadi Ezad — The Code Sorcerer. Built with Next.js, Tailwind CSS, and pure dark magic.
-          </p>
-          <p className="text-muted text-xs mt-2 font-mono">
-            &gt; I don't need a debugger. I am the debugger.
+            &copy; {new Date().getFullYear()} Mohammad. Built with Next.js & Tailwind CSS.
           </p>
         </div>
       </footer>

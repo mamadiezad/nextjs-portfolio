@@ -39,23 +39,3 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #45475a;
 }
-
-@keyframes glow {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.8; }
-}
-
-@keyframes matrix-fall {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
-}
-
-.glow-effect {
-  animation: glow 3s ease-in-out infinite;
-}
-
-.matrix-char {
-  font-family: 'JetBrains Mono', monospace;
-  color: #00FF00;
-  text-shadow: 0 0 10px #00FF00;
-}
