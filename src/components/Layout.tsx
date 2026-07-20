@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Footer */}
       <footer className="border-t border-border/50 py-8">
         <div className="max-w-5xl mx-auto px-4 text-center">
-          <p className="text-muted text-sm">
+          <p className="text-muted text-sm">ساخته شده با ❤️ توسط <a href="https://t.me/llllxyz" className="text-primary hover:underline">Mohammad</a> | 
             &copy; {new Date().getFullYear()} Mohammad. Built with Next.js & Tailwind CSS.
           </p>
         </div>
